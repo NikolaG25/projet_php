@@ -13,6 +13,7 @@
     <main>
         Accueil
         <?php include("partials/ficheProduct.php") ?>
+        <?php include("partials/ficheDesign.php") ?>
     </main>
     <?php include("partials/footer.php"); ?>
 </body>

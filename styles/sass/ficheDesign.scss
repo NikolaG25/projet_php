@@ -21,13 +21,6 @@
 
   }
 
-  &__divSee {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 45px;
-  }
-
   &__seeMore {
     width: 100%;
     height: 45px;
@@ -39,6 +32,8 @@
     padding: 10px;
     height: 100%;
     border-radius: $borderRadiusSmall;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

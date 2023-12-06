@@ -7,33 +7,34 @@
 @import "header.scss";
 @import "ficheProduct.scss";
 @import "ficheDesign.scss";
+@import "designerFav.scss";
 
 * {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: $urbanist;
-  }
-  
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: $urbanist;
 }
-  
-  body {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    width: 100vw;
-  }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  width: 100vw;
+}
 main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 0px;
-    margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  margin: 50px;
 }
 
 a {

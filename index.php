@@ -14,6 +14,7 @@
         Accueil
         <?php include("partials/ficheProduct.php") ?>
         <?php include("partials/ficheDesign.php") ?>
+        <?php include("partials/designerFav.php") ?>
     </main>
     <?php include("partials/footer.php"); ?>
 </body>

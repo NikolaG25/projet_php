@@ -71,7 +71,7 @@ header .menubutton:hover {
 }
 
 .ficheProduct {
-  grid-column: span 3;
+  grid-column: span 2;
   width: 100%;
   height: auto;
 }
@@ -80,6 +80,7 @@ header .menubutton:hover {
   height: 300px;
   object-fit: cover;
   background-color: blue;
+  border-radius: 20px;
 }
 .ficheProduct__name {
   font-family: "Urbanist", sans-serif;
@@ -118,15 +119,16 @@ header .menubutton:hover {
 }
 
 .ficheDesign {
-  grid-column: span 3;
+  grid-column: span 2;
   width: 100%;
-  height: auto;
+  overflow: hidden;
 }
 .ficheDesign__image {
   width: 100%;
-  height: 300px;
+  aspect-ratio: 9/12;
   object-fit: cover;
   background-color: blue;
+  border-radius: 20px;
 }
 .ficheDesign__name {
   font-family: "Urbanist", sans-serif;
@@ -152,6 +154,36 @@ header .menubutton:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.designerFav {
+  grid-column: span 2;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: blue;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.designerFav__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.designerFav__divName {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 43.2291656733%, rgb(0, 0, 0) 100%);
+  padding: 20px;
+}
+.designerFav__name {
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
 }
 
 * {

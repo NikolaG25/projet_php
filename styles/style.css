@@ -139,12 +139,6 @@ header .menubutton:hover {
   font-size: 20px;
   margin-bottom: 15px;
 }
-.ficheDesign__divSee {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 45px;
-}
 .ficheDesign__seeMore {
   width: 100%;
   height: 45px;
@@ -155,7 +149,9 @@ header .menubutton:hover {
   padding: 10px;
   height: 100%;
   border-radius: 7px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {

@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
       $telephone = test_input($_POST["phone"]);
       // check if surname only contains letters and whitespace
-      if (!preg_match("/^[0-9-' ]*$/",$phone)) {
+      if (!preg_match("/^[0-9-' ]*$/",$telephone)) {
         $telephoneErr = "Numéro invalide";
       }
     }
@@ -75,6 +75,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
+  if (empty($_POST["adresse"])) {
+    if (empty($_POST["adresse"])) {
+      $adresseErr = "Une adresse est requise";
+    } else {
+      $adresse = test_input($_POST["adresse"]);
+      if (!preg_match("/^[0-9a-zA-Z_]{5,}$/", $adresse)) {
+        $adresseErr = "Adresse invalide";
+      }
+    }
+  }
+
+
   
 }
 
@@ -89,17 +101,17 @@ function test_input($data) {
 <h2>Inscrivez-vous dès maintenant !</h2>
 <p class="margin"><span class="error">* Champs requis</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Nom: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
+  Nom: <input type="text" name="name" value="<?php echo $nom;?>">
+  <span class="error">* <?php echo $nomErr;?></span>
   <br><br>
-  Prénom: <input type="text" name="surname" value="<?php echo $surname;?>">
-  <span class="error">* <?php echo $surnameErr;?></span>
+  Prénom: <input type="text" name="surname" value="<?php echo $prenom;?>">
+  <span class="error">* <?php echo $prenomErr;?></span>
   <br><br>
-  Adresse : <input type="text" name="adress" value="<?php echo $adress;?>">
-  <span class="error">* <?php echo $adressErr;?></span>
+  Adresse : <input type="text" name="adress" value="<?php echo $adresse;?>">
+  <span class="error">* <?php echo $adresseErr;?></span>
   <br><br>
-  N° Téléphone: <input type="text" name="phone" value="<?php echo $phone;?>">
-  <span class="error">* <?php echo $phoneErr;?></span>
+  N° Téléphone: <input type="text" name="phone" value="<?php echo $telephone;?>">
+  <span class="error">* <?php echo $telephoneErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>

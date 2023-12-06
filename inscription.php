@@ -1,59 +1,17 @@
 <!DOCTYPE HTML>  
 <html>
 <head>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
-.error {color: #f581e0;}
-body{
-  font-family:'Open Sans', sans-serif;
-  display: flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-direction:column;
-}
-input[type=submit] {
-	font-weight: bold;
-  background-color: #d297b3;
-	font-size: 20px;
-	border-radius: 10px;
-  border: 4px solid;
-  font-size:25px;
-  cursor: pointer;
-}
 
-.custom-button:hover {
-  color: #ffffff
-}
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Inscription</title>
 
-input[type=text] {
-  border:5px solid;
-  border-radius: 10px;
-}
-
-.margin {
-  margin-bottom: 50px;
-}
-
-form {
-  color:#ffffff;
-  padding: 20px;
-  border-radius: 51px;
-  background: linear-gradient(145deg, #86375a, #9f416b);
-  box-shadow:  26px 26px 33px #86375a,
-             -26px -26px 33px #9f416b;
-}
-
-p {
-  width: 30%;
-}
-
-{
-  background: #010c03;
-}
-
-</style>
 </head>
-<body>  
+
+<body> 
+
+<?php include("partials/header.php"); ?> 
 
 <?php
 // define variables and set to empty values
@@ -101,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $telephone = test_input($_POST["phone"]);
       // check if surname only contains letters and whitespace
       if (!preg_match("/^[0-9-' ]*$/",$phone)) {
-        $telephoneErr = "Lettres et espaces uniquement";
+        $telephoneErr = "Numéro invalide";
       }
     }
   }
@@ -128,8 +86,8 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
-<p class="margin"><span class="error">* required field</span></p>
+<h2>Inscrivez-vous dès maintenant !</h2>
+<p class="margin"><span class="error">* Champs requis</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Nom: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
@@ -140,37 +98,21 @@ function test_input($data) {
   Adresse : <input type="text" name="adress" value="<?php echo $adress;?>">
   <span class="error">* <?php echo $adressErr;?></span>
   <br><br>
-  Phone: <input type="text" name="phone" value="<?php echo $phone;?>">
+  N° Téléphone: <input type="text" name="phone" value="<?php echo $phone;?>">
   <span class="error">* <?php echo $phoneErr;?></span>
   <br><br>
-  mail: <input type="text" name="email" value="<?php echo $email;?>">
+  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Mot de passe:
- 
+  Mot de passe: <input type="text" name="motdepasse" value="<?php echo $motdepasse;?>">
+  <span class="error">* <?php echo $motdepasseErr;?></span>
   <br><br>
 
-  <input type="submit" name="submit" value="Submit" class="custom-button">  
+  <input type="submit" name="submit" value="M'inscrire" class="custom-button">  
+
 </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $surname;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $phone;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
-echo "<br>";
-echo $question;
-?>
+<?php include("partials/footer.php"); ?>
 
 </body>
 </html>

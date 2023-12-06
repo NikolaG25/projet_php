@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500&display=swap');
+$urbanist: 'Urbanist', sans-serif;
+
+.titre{
+    font-weight: bold;
+    font-size: 38px;
+}
+
+header{
+    .menubutton{
+        font-weight: bold;
+        font-size: 30px;
+        color: $black;
+
+    }
+}
+
+footer{
+    p{
+        color: $black;
+        font-size: 17px;
+    }
+}
+

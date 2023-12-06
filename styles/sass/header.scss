@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: $shadow;
+    &>div{
+        display: flex;
+        align-items: center;
+    }
+    .menudroite{
+        gap: 30px;
+    }
+    .logo{
+        margin: 10px 35px 0 0;   
+    }
+    .menubutton{
+        padding: 0 35px;
+        height: 100%;
+        background: $white;
+        transition: background 0.3s;
+        display: block;
+
+        &:hover{
+            background: $color-main1;
+            transition: 0.3s;
+        }
+    }
+}

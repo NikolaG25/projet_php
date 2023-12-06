@@ -39,10 +39,18 @@
     font-weight: bold;
   }
   &__seeMore {
-    width: 65%;
-    background-color: $color-main1;
-    padding: 10px;
-    height: 100%;
-    border-radius: $borderRadiusSmall;
+    width: 70%;
+    height: 45px;
+  }
+
+  &__link {
+      width: 100%;
+      background-color: $color-main1;
+      padding: 10px;
+      height: 100%;
+      border-radius: $borderRadiusSmall;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 }

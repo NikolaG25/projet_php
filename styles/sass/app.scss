@@ -48,3 +48,12 @@ button {
   width: max-content;
   height: max-content;
 }
+
+.button {
+  transition: all .3s ease-in-out;
+}
+
+.button:hover {
+  background-color: $color-main2;
+  transition: all .3s ease-in-out;
+}

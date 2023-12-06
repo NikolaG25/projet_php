@@ -111,11 +111,18 @@ header .menubutton:hover {
   font-weight: bold;
 }
 .ficheProduct__seeMore {
-  width: 65%;
+  width: 70%;
+  height: 45px;
+}
+.ficheProduct__link {
+  width: 100%;
   background-color: #F2CB05;
   padding: 10px;
   height: 100%;
   border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ficheDesign {
@@ -262,6 +269,15 @@ button {
   background: none;
   width: max-content;
   height: max-content;
+}
+
+.button {
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #F29F05;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

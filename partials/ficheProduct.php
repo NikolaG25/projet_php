@@ -9,7 +9,7 @@
         </div>
 
         <button class="ficheProduct__seeMore">
-            <a class="ficheProduct__link" href="#">
+            <a class="ficheProduct__link button" href="#">
                 Voir les designs
             </a>
         </button>

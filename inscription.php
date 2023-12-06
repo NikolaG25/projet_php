@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
       $prenom = test_input($_POST["prenom"]);
       // check if surname only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z-' ]*$/",$surname)) {
-        $surnameErr = "Lettres et espaces uniquement";
+      if (!preg_match("/^[a-zA-Z-' ]*$/",$prenom)) {
+        $prenomErr = "Lettres et espaces uniquement";
       }
   }
 

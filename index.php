@@ -15,6 +15,7 @@
         <?php include("partials/ficheProduct.php") ?>
         <?php include("partials/ficheDesign.php") ?>
         <?php include("partials/designerFav.php") ?>
+        <?php include("partials/ficheDesigner.php") ?>
     </main>
     <?php include("partials/footer.php"); ?>
 </body>

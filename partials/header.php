@@ -1,7 +1,7 @@
 <header>
     <div class="menugauche menu">
         <div class="logo">
-            <a href="/">
+            <a href="./">
                 <img src="assets\logo.png" alt="Logo" width="60px" height="60px">
             </a>
         </div>

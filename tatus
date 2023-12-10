@@ -1,0 +1,42 @@
+[33mcommit a7a591e463c7ffe48b7a0ed0be6c582deaafffcf[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: a548dd7 dab8aef
+Author: Samuel Bensalah <sambensalah68290@gmail.com>
+Date:   Wed Dec 6 11:18:10 2023 +0100
+
+    Merge branch 'main' of https://github.com/NikolaG25/projet_php
+
+[33mcommit dab8aefc4c9c22836e88b67fda6b6a2ec7a9ee79[m
+Author: Nicolas Gelin <nicolas.gelin@edu.univ-fcomte.fr>
+Date:   Wed Dec 6 10:54:37 2023 +0100
+
+    test
+
+[33mcommit a247f83bc05fe0e579076832d528be6e84411345[m
+Author: Nicolas Gelin <nicolas.gelin@edu.univ-fcomte.fr>
+Date:   Wed Dec 6 10:44:25 2023 +0100
+
+    bug fiche produit
+
+[33mcommit a548dd71d88c2545f6992a1a24993053759cf880[m
+Author: Samuel Bensalah <sambensalah68290@gmail.com>
+Date:   Wed Dec 6 10:36:15 2023 +0100
+
+    Test commit & finition header
+
+[33mcommit f9955983fcdc2bf96a8b2046b73844b4698bdcfe[m
+Author: Nicolas Gelin <nicolas.gelin@edu.univ-fcomte.fr>
+Date:   Wed Dec 6 10:32:52 2023 +0100
+
+    Fin fiche produit
+
+[33mcommit eb053c58c2db0e3eef833fbad438b1a311fdc00c[m
+Author: Nicolas Gelin <nicolas.gelin@edu.univ-fcomte.fr>
+Date:   Wed Dec 6 10:01:42 2023 +0100
+
+    Correction bug style
+
+[33mcommit ac6da69f408b72b474a835a9feae381f3d35cb04[m
+Author: Nicolas Gelin <nicolas.gelin@edu.univ-fcomte.fr>
+Date:   Wed Dec 6 09:33:21 2023 +0100
+
+    first commit

@@ -36,7 +36,7 @@
         }
 
         //Requete
-        $sql = "SELECT * FROM design";
+        $sql = "SELECT NomDesign, Style, Image, Pseudo FROM design, designer WHERE design.ID_designer = designer.ID_designer";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -46,7 +46,7 @@
                 // echo "- Name: " . $row["NomDesign"] .
                 //     " - Style : " . $row["Style"] .
                 //     " - ImgURL : " . $row["Image"] .
-                //     " - ID Designer : " . $row["ID_designer"] . "<br>";
+                //     " - ID Designer : " . $row["Pseudo"] . "<br>";
             }
         } else {
             echo "0 results";

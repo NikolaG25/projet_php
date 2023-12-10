@@ -46,7 +46,7 @@
                 // echo "- Name: " . $row["NomDesign"] .
                 //     " - Style : " . $row["Style"] .
                 //     " - ImgURL : " . $row["Image"] .
-                //     " - ID Designer : " . $row["Pseudo"] . "<br>";
+                //     " - Nom Designer : " . $row["Pseudo"] . "<br>";
             }
         } else {
             echo "0 results";

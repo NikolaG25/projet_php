@@ -1,0 +1,153 @@
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.product-list-section {
+    grid-column: span 7;
+    background: $color-main1; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .product-list {
+        display: flex;
+        flex-wrap: column;
+        gap: 20px;
+    }
+
+    .product-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    
+        .product-image-group {
+            display: flex;
+            gap: 10px;
+        }
+        .plus-signe {
+            text-align: center;
+            color: black;
+            font-size: 35px;
+            font-family: Urbanist;
+            font-weight: 500;
+            
+        }
+        .product-image {
+            width: 50px; /* Ajustez la taille selon vos besoins */
+            height: 50px;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.10);
+            border-radius: 10px;
+        }
+    
+        .product-item-group {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+            
+    
+            .product-name {
+                color: black;
+                font-size: 16px;
+                font-family: 'Urbanist';
+                font-weight: 500;
+            }
+    
+            .product-price {
+                color: black;
+                font-size: 16px;
+                font-family: 'Urbanist';
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.validation-section {
+    grid-column: span 5;
+    background: none;
+    border-radius: 0;
+    padding: 20px;
+    box-shadow: none;
+
+    .validate-button {
+        width: 50%;
+        margin: 20px 25%;
+        padding: 5px 0;
+        background: $color-main1;
+        border-radius: 5px;
+        overflow: hidden;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: $white;
+        font-size: 18px;
+        font-family: 'Urbanist';
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            background: $color-main2;
+            transition: 0.3s;
+        }
+    }
+
+    .line-seperator {
+        height: 3px;
+        background: $color-main1;
+        margin: 20px 0;
+    }
+
+    .total-calculation-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .total-calculation-line {
+            display: flex;
+            justify-content: space-between;
+
+            .total-claculation-products,
+            .tva-text,
+            .transport-text {
+                font-size: 18px;
+                font-family: 'Urbanist';
+                font-weight: 500;
+                color: #000;
+            }
+
+            .total-calculation-fees {
+                font-size: 18px;
+                font-family: 'Urbanist';
+                font-weight: 500;
+                color: #000;
+            }
+        }
+    }
+
+    .total-section {
+        display: flex;
+        justify-content: space-between;
+
+        .total-text {
+            font-size: 20px;
+            font-family: 'Urbanist';
+            font-weight: 700;
+            color: #000;
+        }
+
+        .total-price {
+            font-size: 20px;
+            font-family: 'Urbanist';
+            font-weight: 700;
+            color: #000;
+        }
+    }
+}

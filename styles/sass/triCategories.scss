@@ -1,0 +1,19 @@
+.triCategories{
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    h2{
+        color: $color-main2;
+        font-size: 20px;
+    }
+    >div{
+        font-size: 20px;
+        cursor: pointer;
+        &.active{
+            color: $color-main2;
+            text-decoration: underline;
+        }
+    }
+}

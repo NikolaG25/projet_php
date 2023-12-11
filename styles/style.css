@@ -403,6 +403,11 @@ input[type=text] {
   border: 2px #F2CB05 solid;
 }
 
+label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 form.inscription {
   grid-column: span 6;
 }

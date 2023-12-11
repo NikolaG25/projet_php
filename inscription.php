@@ -98,6 +98,7 @@ function test_input($data) {
 }
 ?>
 
+<main>
 <h2>Inscrivez-vous dès maintenant !</h2>
 <p class="margin"><span class="error">* Champs requis</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -123,6 +124,7 @@ function test_input($data) {
   <input type="submit" name="submit" value="M'inscrire" class="custom-button">  
 
 </form>
+</main>
 
 <?php include("partials/footer.php"); ?>
 

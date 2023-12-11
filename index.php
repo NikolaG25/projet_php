@@ -11,13 +11,12 @@
 <body>
     <?php include("partials/header.php"); ?>
     <main>
-        Accueil
-        <?php include("partials/ficheProduct.php") ?>
-        <?php include("partials/ficheDesign.php") ?>
-        <?php include("partials/designerFav.php") ?>
-        <?php include("partials/ficheDesigner.php") ?>
+        <div class="heroHome">
+            
+        </div>
     </main>
     <?php include("partials/footer.php"); ?>
 </body>
 
 </html>
+

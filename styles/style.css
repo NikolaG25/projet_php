@@ -241,6 +241,17 @@ header .menubutton:hover {
   align-items: center;
 }
 
+<<<<<<< HEAD
+.heroSupport__image {
+  background-color: blue;
+  grid-column: span 4;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 30px;
+}
+.heroSupport__content {
+  grid-column: span 6;
+=======
 .triCategories {
   grid-column: span 12;
   display: flex;
@@ -394,6 +405,7 @@ main {
   font-family: "Urbanist";
   font-weight: 700;
   color: #000;
+>>>>>>> d2bde608ee609101179e11d3603d68e52b86366e
 }
 
 input[type=text] {

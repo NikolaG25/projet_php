@@ -97,22 +97,22 @@ function test_input($data) {
 <h2>Inscrivez-vous dès maintenant !</h2>
 <p class="margin"><span class="error">* Champs requis</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="inscription">
-  <label for="name">Nom :</label><input type="text" name="name" value="<?php echo $nom;?>">
+  <label for="name">Nom :</label><input type="text" name="name" value="<?php echo $nom;?>" required>
   <span class="error">* <?php echo $nomErr;?></span>
   <br><br>
- <label for="surname">Prénom :</label> <input type="text" name="surname" value="<?php echo $prenom;?>">
+ <label for="surname">Prénom :</label> <input type="text" name="surname" value="<?php echo $prenom;?>" required>
   <span class="error">* <?php echo $prenomErr;?></span>
   <br><br>
-  <label for="adress">Adresse :</label><input type="text" name="adress" value="<?php echo $adresse;?>">
+  <label for="adress">Adresse :</label><input type="text" name="adress" value="<?php echo $adresse;?>" required>
   <span class="error">* <?php echo $adresseErr;?></span>
   <br><br>
-  <label for="phone">N° Téléphone :</label><input type="text" name="phone" value="<?php echo $telephone;?>">
+  <label for="phone">N° Téléphone :</label><input type="text" name="phone" value="<?php echo $telephone;?>" required>
   <span class="error">* <?php echo $telephoneErr;?></span>
   <br><br>
-  <label for="email">E-mail :</label><input type="text" name="email" value="<?php echo $email;?>">
+  <label for="email">E-mail :</label><input type="text" name="email" value="<?php echo $email;?>" required>
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  <label for="motdepasse">Mot de passe :</label><input type="password" name="motdepasse" value="<?php echo $motdepasse;?>">
+  <label for="motdepasse">Mot de passe :</label><input type="password" name="motdepasse" value="<?php echo $motdepasse;?>" required>
   <span class="error">* <?php echo $motdepasseErr;?></span>
   <br><br>
 

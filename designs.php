@@ -36,7 +36,7 @@
         }
 
         //Requete
-        $sql = "SELECT NomDesign, Style, Image, Pseudo FROM design, designer WHERE design.ID_designer = designer.ID_designer";
+        $sql = "SELECT NomDesign, ID_design, Style, Image, Pseudo FROM design, designer WHERE design.ID_designer = designer.ID_designer";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {

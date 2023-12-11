@@ -3,7 +3,7 @@
     <h3 class="ficheDesign__name"><?php echo (!$row["NomDesign"]) ? 'Pas de nom' : $row["NomDesign"]; ?></h3>
     <h4 class="ficheDesign__nameDesigner">By <?php echo (!$row["Pseudo"]) ? 'Pas de designer' : $row["Pseudo"]; ?></h3>
         <button class="ficheDesign__seeMore">
-            <a class="ficheDesign__link button" href="#">
+            <a class="ficheDesign__link button" href="./design.php?id=<?php echo $row["ID_design"]?>">
                 Voir tous les produits
             </a>
         </button>

@@ -1,10 +1,10 @@
 <div class="ficheProduct">
-    <div src="" alt="" class="ficheProduct__image"></div>
-    <h3 class="ficheProduct__name">Nom produit</h3>
+    <img src="<?php echo (!$row["Image"]) ? '' : $row["Image"]; ?>" alt="" class="ficheProduct__image" />
+    <h3 class="ficheProduct__name"><?php echo (!$row["Type"]) ? 'Pas de nom' : $row["Type"]; ?></h3>
     <div class="ficheProduct__priceSee">
         <div class="ficheProduct__priceDiv">
             <p class="ficheProduct__price">
-                Prix
+            <?php echo (!$row["Prix"]) ? 'Pas de prix' : $row["Prix"]; ?>€
             </p>
         </div>
 

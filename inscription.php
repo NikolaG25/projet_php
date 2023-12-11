@@ -53,7 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   if (empty($_POST["telephone"])) {
-    if (empty($_POST["telephone"])) {
       $telephoneErr = "Numéro de téléphone requis";
     } else {
       $telephone = test_input($_POST["phone"]);
@@ -62,10 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $telephoneErr = "Numéro invalide";
       }
     }
-  }
 
   if (empty($_POST["motdepasse"])) {
-    if (empty($_POST["motdepasse"])) {
       $motdepasseErr = "Un mot de passe est requis";
     } else {
       $motdepasse = test_input($_POST["motdepasse"]);
@@ -73,10 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $motdepasseErr = "Mot de passe invalide";
       }
     }
-  }
 
   if (empty($_POST["adresse"])) {
-    if (empty($_POST["adresse"])) {
       $adresseErr = "Une adresse est requise";
     } else {
       $adresse = test_input($_POST["adresse"]);
@@ -84,7 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $adresseErr = "Adresse invalide";
       }
     }
-  }
 
 
   
@@ -117,7 +111,7 @@ function test_input($data) {
   <label for="email">E-mail :</label><input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  <label for="motdepasse">Mot de passe :</label><input type="text" name="motdepasse" value="<?php echo $motdepasse;?>">
+  <label for="motdepasse">Mot de passe :</label><input type="password" name="motdepasse" value="<?php echo $motdepasse;?>">
   <span class="error">* <?php echo $motdepasseErr;?></span>
   <br><br>
 

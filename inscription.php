@@ -101,8 +101,8 @@ function test_input($data) {
 <main>
 <h2>Inscrivez-vous dès maintenant !</h2>
 <p class="margin"><span class="error">* Champs requis</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Nom: <input type="text" name="name" value="<?php echo $nom;?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="inscription">
+  <label for="name">Nom :</label><input type="text" name="name" value="<?php echo $nom;?>">
   <span class="error">* <?php echo $nomErr;?></span>
   <br><br>
   Prénom: <input type="text" name="surname" value="<?php echo $prenom;?>">

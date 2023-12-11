@@ -45,7 +45,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" name="submit" value="Se connecter" class="custom-button">  
 
     </form>
-    </main>
+
+    <p>Pas de compte ? </p>
+
+    <a href="inscription.php">Créez votre compte !</a>
+</main>
     <?php include("partials/footer.php"); ?>
 </body>
 

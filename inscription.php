@@ -53,7 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   if (empty($_POST["telephone"])) {
-    if (empty($_POST["telephone"])) {
       $telephoneErr = "Numéro de téléphone requis";
     } else {
       $telephone = test_input($_POST["phone"]);
@@ -62,21 +61,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $telephoneErr = "Numéro invalide";
       }
     }
-  }
 
   if (empty($_POST["motdepasse"])) {
-    if (empty($_POST["motdepasse"])) {
       $motdepasseErr = "Un mot de passe est requis";
     } else {
       $motdepasse = test_input($_POST["motdepasse"]);
-      if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $motdepasse)) {
+      if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,16}$/', $motdepasse)) {
+        //Le mot de passe doit inclure un chiffre, une lettre majuscule ou minuscule et doit être entre 8 et 16 caractères. 
         $motdepasseErr = "Mot de passe invalide";
       }
     }
-  }
 
   if (empty($_POST["adresse"])) {
-    if (empty($_POST["adresse"])) {
       $adresseErr = "Une adresse est requise";
     } else {
       $adresse = test_input($_POST["adresse"]);
@@ -84,7 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $adresseErr = "Adresse invalide";
       }
     }
-  }
 
 
   
@@ -98,31 +93,33 @@ function test_input($data) {
 }
 ?>
 
+<main>
 <h2>Inscrivez-vous dès maintenant !</h2>
 <p class="margin"><span class="error">* Champs requis</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Nom: <input type="text" name="name" value="<?php echo $nom;?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="inscription">
+  <label for="name">Nom :</label><input type="text" name="name" value="<?php echo $nom;?>" required>
   <span class="error">* <?php echo $nomErr;?></span>
   <br><br>
-  Prénom: <input type="text" name="surname" value="<?php echo $prenom;?>">
+ <label for="surname">Prénom :</label> <input type="text" name="surname" value="<?php echo $prenom;?>" required>
   <span class="error">* <?php echo $prenomErr;?></span>
   <br><br>
-  Adresse : <input type="text" name="adress" value="<?php echo $adresse;?>">
+  <label for="adress">Adresse :</label><input type="text" name="adress" value="<?php echo $adresse;?>" required>
   <span class="error">* <?php echo $adresseErr;?></span>
   <br><br>
-  N° Téléphone: <input type="text" name="phone" value="<?php echo $telephone;?>">
+  <label for="phone">N° Téléphone :</label><input type="text" name="phone" value="<?php echo $telephone;?>" required>
   <span class="error">* <?php echo $telephoneErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <label for="email">E-mail :</label><input type="text" name="email" value="<?php echo $email;?>" required>
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Mot de passe: <input type="text" name="motdepasse" value="<?php echo $motdepasse;?>">
+  <label for="motdepasse">Mot de passe :</label><input type="password" name="motdepasse" value="<?php echo $motdepasse;?>" required>
   <span class="error">* <?php echo $motdepasseErr;?></span>
   <br><br>
 
   <input type="submit" name="submit" value="M'inscrire" class="custom-button">  
 
 </form>
+</main>
 
 <?php include("partials/footer.php"); ?>
 

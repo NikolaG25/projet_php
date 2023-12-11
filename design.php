@@ -11,7 +11,11 @@
 <body>
     <?php include("partials/header.php"); ?>
     <main>
-        Page du design
+        Page du design n°
+        <?php
+        $id = $_GET['id'];
+        echo $id
+        ?>
     </main>
     <?php include("partials/footer.php"); ?>
 </body>

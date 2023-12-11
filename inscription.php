@@ -105,19 +105,19 @@ function test_input($data) {
   <label for="name">Nom :</label><input type="text" name="name" value="<?php echo $nom;?>">
   <span class="error">* <?php echo $nomErr;?></span>
   <br><br>
-  Prénom: <input type="text" name="surname" value="<?php echo $prenom;?>">
+ <label for="name">Prénom :</label> <input type="text" name="surname" value="<?php echo $prenom;?>">
   <span class="error">* <?php echo $prenomErr;?></span>
   <br><br>
-  Adresse : <input type="text" name="adress" value="<?php echo $adresse;?>">
+  <label for="name">Adresse :</label><input type="text" name="adress" value="<?php echo $adresse;?>">
   <span class="error">* <?php echo $adresseErr;?></span>
   <br><br>
-  N° Téléphone: <input type="text" name="phone" value="<?php echo $telephone;?>">
+  <label for="name">N° Téléphone :</label><input type="text" name="phone" value="<?php echo $telephone;?>">
   <span class="error">* <?php echo $telephoneErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <label for="name">E-mail :</label><input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Mot de passe: <input type="text" name="motdepasse" value="<?php echo $motdepasse;?>">
+  <label for="name">Mot de passe :</label><input type="text" name="motdepasse" value="<?php echo $motdepasse;?>">
   <span class="error">* <?php echo $motdepasseErr;?></span>
   <br><br>
 

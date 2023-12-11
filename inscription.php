@@ -66,7 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $motdepasseErr = "Un mot de passe est requis";
     } else {
       $motdepasse = test_input($_POST["motdepasse"]);
-      if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $motdepasse)) {
+      if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,16}$/', $motdepasse)) {
+        //Le mot de passe doit inclure un chiffre, une lettre majuscule ou minuscule et doit être entre 8 et 16 caractères. 
         $motdepasseErr = "Mot de passe invalide";
       }
     }

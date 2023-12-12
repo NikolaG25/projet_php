@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-        
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +7,36 @@
     <link rel="stylesheet" href="./styles/panier.css">
     <title>DesignHub</title>
 </head>
-<?php
-        try {
-            $bdd = new PDO('mysql:host=localhost;dbname=BD_sslo;charset=utf8', 'sslo', '');
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
+
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "projet_technoweb";
+
+        // Créer la connexion
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+        // Vérifier la connexion
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
         }
 
-     
         $idClient = 1;
 
         // Récupérer la liste des produits dans le panier du client
-        $sqlProducts = "SELECT * FROM transaction WHERE ID_client = :idClient";
-        $statementProducts = $bdd->prepare($sqlProducts);
-        $statementProducts->bindParam(':idClient', $idClient, PDO::PARAM_INT);
-        $statementProducts->execute();
-        $products = $statementProducts->fetchAll(PDO::FETCH_ASSOC);
+        $sqlProducts = "SELECT * FROM transaction WHERE ID_client = $idClient";
+        $resultProducts = mysqli_query($conn, $sqlProducts);
+        $products = mysqli_fetch_all($resultProducts, MYSQLI_ASSOC);
 
         // Calcul total des produits, la TVA et les frais de transport
-        $sqlTotalProducts = "SELECT SUM(PrixAchat * Quantite) AS totalProducts FROM transaction WHERE ID_client = :idClient";
-        $statementTotalProducts = $bdd->prepare($sqlTotalProducts);
-        $statementTotalProducts->bindParam(':idClient', $idClient, PDO::PARAM_INT);
-        $statementTotalProducts->execute();
-        $totalProducts = $statementTotalProducts->fetch(PDO::FETCH_ASSOC)['totalProducts'];
+        $sqlTotalProducts = "SELECT SUM(PrixAchat * Quantite) AS totalProducts FROM transaction WHERE ID_client = $idClient";
+        $resultTotalProducts = mysqli_query($conn, $sqlTotalProducts);
+        $totalProducts = mysqli_fetch_assoc($resultTotalProducts)['totalProducts'];
 
         // Calcul du TVA et les frais de transport
         $tva = $totalProducts * 0.20; // Supposons une TVA de 20%
-        $fraisTransport = 10.00; //frais de transport
+        $fraisTransport = 10.00; // Frais de transport
 
         // le total général
         $totalGeneral = $totalProducts + $tva + $fraisTransport;
@@ -97,5 +99,4 @@
     </main>
     <?php include("partials/footer.php"); ?>
 </body>
-
 </html>

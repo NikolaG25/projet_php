@@ -22,10 +22,10 @@
         // $password = "Tr-6SZFmdJ5";
         // $dbname = "010o5_projet_php";
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "projet_technoweb";
+        $servername = "010o5.myd.infomaniak.com";
+        $username = "010o5_projet_php";
+        $password = "Tr-6SZFmdJ5";
+        $dbname = "010o5_projet_php";
 
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);

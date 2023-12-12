@@ -11,8 +11,68 @@
 <body>
     <?php include("partials/header.php"); ?>
     <main>
-        Profil Designer
+
+    <?php  
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "TechnoWeb";
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+        // Check connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        } 
+    ?>
+
+    <?php
+    $sql = "SELECT FirstName, LastName, Image, Adresse, Description FROM designer WHERE ID_Designer = 1";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+         // output data of each row
+        $i = 0;
+        while ($row = mysqli_fetch_assoc($result)) {
+        if ($i < 4) {
+        include("partials/ficheDesignLeft.php");
+        $i++;
+        }
+    }
+} else {
+        echo "0 results";
+        } ?>
+    
+    <div class = "ficheDPList" >
+    <h3 class = "ficheDP__title1"> Design par Designer </h3> 
+
+
+    
+    
+<div class = "ficheDPRow" >
+    <?php
+         //Requete
+         // SELECT NomDesign, Description, Image, FROM design"
+        $sql = "SELECT NomDesign, Description, Image FROM design WHERE ID_Designer = 1";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+             // output data of each row
+            $i = 0;
+            while ($row = mysqli_fetch_assoc($result)) {
+            if ($i < 4) {
+            include("partials/ficheDesign2.php");
+            $i++;
+            }
+        }
+    } else {
+            echo "0 results";
+            }
+                ?>
+    </div>
+    </div>
+
+    <?php
+    //include("partials/ficheDesign2.php"); ?>
     </main>
+
     <?php include("partials/footer.php"); ?>
 </body>
 

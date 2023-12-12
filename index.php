@@ -58,6 +58,28 @@
                 ?>
             </ul>
         </div>
+        <div class="designersSelected">
+            <h2 class="designersSelected">Notre sélection de designers</h2>
+            <ul class="designersSelected__list">
+                <?php
+                //Requete
+                $designer = "SELECT Pseudo, Image FROM designer";
+                $result = mysqli_query($conn, $designer);
+
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    $i = 0;
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        if ($i < 4) {
+                            include("partials/designerFav.php");
+                            $i++;
+                        }
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
+        </div>
     </main>
     <?php include("partials/footer.php"); ?>
 </body>

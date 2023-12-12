@@ -16,7 +16,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "TechnoWeb";
+    $dbname = "projet_technoweb";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
         // Check connection
@@ -57,10 +57,7 @@
              // output data of each row
             $i = 0;
             while ($row = mysqli_fetch_assoc($result)) {
-            if ($i < 4) {
-            include("partials/ficheDesign2.php");
-            $i++;
-            }
+                include("partials/ficheDesign2.php");
         }
     } else {
             echo "0 results";
@@ -68,11 +65,8 @@
                 ?>
     </div>
     </div>
-
-    <?php
-    //include("partials/ficheDesign2.php"); ?>
     </main>
-
+ 
     <?php include("partials/footer.php"); ?>
 </body>
 
